@@ -1,4 +1,4 @@
-# Webpack 4 Boilerplate ES6/Sass with build-in option to change preprocessor (less/stylus)
+# Project for drawing made out from boilerplate
 This <strong>Webpack 4 Boilerplate</strong> comes with 2 builds:
 
 ```
