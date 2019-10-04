@@ -2,15 +2,37 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Webpack Boilerplate</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webpack Boilerplate</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+    <script defer src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </head>
 
 <body>
-  <h1 class="center">Draw & Paint</h1>
-  <script defer src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+<div class="wrp">
+
+    <h1 class="center">Draw & Paint</h1>
+    <button class="input-section button" id="clear">Clear</button>
+    <div class="input-section" id="colors">
+        <label class="label label_Blue" for="radio-blue">Blue</label>
+        <input id="radio-blue" name="color" type="radio" value="blue">
+        <label class="label label_Red" for="radio-red">Red</label>
+        <input id="radio-red" name="color" type="radio" value="red">
+        <label class="label label_Yellow" for="radio-yellow">Yellow</label>
+        <input id="radio-yellow" name="color" type="radio" value="yellow">
+        <label class="label label_Black" for="radio-black">Black</label>
+        <input id="radio-black" name="color" type="radio" value="black" checked>
+    </div>
+    <div class="input-section">
+        <label class="label label-underline label-underline_thin" for="thin">Thin</label>
+        <input id="thin" name="lineWidth" type="radio" value="1" checked>
+        <label class="label label-underline label-underline_thick" for="thick">Thick</label>
+        <input id="thick" name="lineWidth" type="radio" value="5">
+        <label class="label label-underline label-underline_thicker" for="thicker">Thicker</label>
+        <input id="thicker" name="lineWidth" type="radio" value="10">
+    </div>
+</div>
 <canvas id="canvas"></canvas>
 </body>
 

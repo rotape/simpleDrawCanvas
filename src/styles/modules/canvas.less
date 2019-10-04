@@ -1,7 +1,59 @@
+.wrp {
+  max-width: 75%;
+  margin-top: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
 canvas {
-  width: 75%;
-  height: 80%;
+  margin-top: 1em;
   display: block;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   background-color: white;
+}
+.input-section {
+  margin-top: 1em;
+}
+.button {
+  color: #444444;
+  background: #F3F3F3;
+  border: 1px #DADADA solid;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 9pt;
+  outline: none;
+}
+.label {
+  padding: 0.25em;
+  &_Blue {
+    color: #f1f1f1;
+    background-color: blue;
+  }
+  &_Red {
+    background-color: red;
+  }
+  &_Yellow {
+    background-color: yellow;
+  }
+  &_Black {
+    color: #f1f1f1;
+    background-color: black;
+  }
+  &-underline{
+    border-color: black;
+    border-bottom-style: solid;
+    &_thin{
+      border-bottom-width: 1px;
+    }
+    &_thick {
+      border-bottom-width: 5px;
+    }
+    &_thicker{
+      border-bottom-width: 10px;
+    }
+  }
 }
