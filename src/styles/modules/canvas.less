@@ -27,22 +27,45 @@ canvas {
   font-size: 9pt;
   outline: none;
 }
-.label {
-  padding: 0.25em;
-  &_Blue {
-    color: #f1f1f1;
+.radio {
+  margin: 1.5em;
+  padding: 2.5em;
+  &:before{
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2em;
+    left: -0.5em;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+  }
+  &_Blue:before {
     background-color: blue;
   }
-  &_Red {
+  &_Red:before {
     background-color: red;
   }
-  &_Yellow {
+  &_Yellow:before {
     background-color: yellow;
   }
-  &_Black {
-    color: #f1f1f1;
+  &_Black:before {
     background-color: black;
   }
+  &_Green:before {
+     background-color: green;
+   }
+  &_Orange:before {
+    background-color: orange;
+  }
+  &_Purple:before {
+    background-color: purple;
+  }
+}
+.label {
+  padding: 0.25em;
   &-underline{
     border-color: black;
     border-bottom-style: solid;
