@@ -50,10 +50,6 @@ class DrawCanvas {
     clear() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
-
-    chooseStrokeWidth(value) {
-        this.context.lineWidth(value);
-    }
 }
 
 new DrawCanvas();
