@@ -51,7 +51,6 @@ class DrawCanvas {
         this.context.moveTo(this.prevPosition.x, this.prevPosition.y);
         this.context.lineTo(this.currentPosition.x, this.currentPosition.y);
         this.context.stroke();
-        this.save();
     }
 
     clear() {
