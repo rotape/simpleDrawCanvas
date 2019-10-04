@@ -29,6 +29,12 @@ class DrawCanvas {
         document.getElementById('clear').addEventListener('click', () => {
             this.clear()
         });
+        document.getElementById('restore').addEventListener('click', () => {
+            this.restore();
+        });
+        document.getElementById('save').addEventListener('click', () => {
+            this.save();
+        });
     }
 
     updateCurrentPosition(e) {
@@ -45,10 +51,24 @@ class DrawCanvas {
         this.context.moveTo(this.prevPosition.x, this.prevPosition.y);
         this.context.lineTo(this.currentPosition.x, this.currentPosition.y);
         this.context.stroke();
+        this.save();
     }
 
     clear() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+    save() {
+        this.saved = this.canvas.toDataURL('image/png');
+        localStorage.setItem('canvasImage', this.saved);
+    }
+
+    restore() {
+        let dataURL = localStorage.getItem('canvasImage');
+        let image = new Image();
+        image.src = dataURL;
+        image.onload = () => this.context.drawImage(image, 0, 0);
+        this.context.drawImage(image, 0, 0);
     }
 }
 
