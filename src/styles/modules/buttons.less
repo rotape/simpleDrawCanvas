@@ -1,0 +1,75 @@
+.button {
+  color:#F3F3F3;
+  background:lightcoral ;
+  border: 1px #DADADA solid;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 9pt;
+  outline: none;
+  &:hover{
+    background-color: coral;
+  }
+  &:active{
+    background-color: coral;
+    box-shadow: 0 1px lightpink;
+    transform: translateY(1px);
+
+  }
+}
+.radio {
+  margin: 1.5em;
+  padding: 2.5em;
+  &:before{
+    width: 2em;
+    height: 2em;
+    border-radius: 15px;
+    top: -2.2em;
+    left: -0.5em;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+  }
+  &:hover:before{
+    border-color: #333333;
+  }
+  &_Blue:before {
+    background-color: blue;
+  }
+  &_Red:before {
+    background-color: red;
+  }
+  &_Yellow:before {
+    background-color: yellow;
+  }
+  &_Black:before {
+    background-color: black;
+  }
+  &_Green:before {
+    background-color: green;
+  }
+  &_Orange:before {
+    background-color: orange;
+  }
+  &_Purple:before {
+    background-color: purple;
+  }
+}
+.label {
+  padding: 0.25em;
+  &-underline{
+    border-color: black;
+    border-bottom-style: solid;
+    &_thin{
+      border-bottom-width: 1px;
+    }
+    &_thick {
+      border-bottom-width: 5px;
+    }
+    &_thicker{
+      border-bottom-width: 10px;
+    }
+  }
+}
