@@ -1,5 +1,5 @@
-# Project for drawing made out from boilerplate
-This <strong>Webpack 4 Boilerplate</strong> comes with 2 builds:
+# Project for drawing 
+This project it comes with 2 builds:
 
 ```
 npm run build:dev
@@ -19,29 +19,6 @@ npm run build:prod
   6. hash css and js file (file versioning for browser caching -> cache busting) <br>
 
 ## Setup
-1. git clone https://github.com/mwieth/Webpack-4-boilerplate.git
+1. git clone repo
 2. run <code>npm install</code> in project folder
 3. <code>npm run build:dev</code>
-
-## Preprocessor support (default: Sass)
-
---> if u want to change to <strong>less</strong> run:
-
-  1. <code>npm install less less-loader --save-dev</code>
-  2. <code>npm uninstall node-sass sass-loader</code>
-
-  3. set <code>selectedPreprocessor</code> in \webpack\loader.js to less
-
-  4. change default files in styles from sass to less (*.less) and update <code>import</code> in index.js line 1
-
---> if u want to change to <strong>stylus</strong> run:
-
-  1. <code>npm install stylus stylus-loader --save-dev</code>
-  2. <code>npm uninstall node-sass sass-loader</code>
-
-  3. set <code>selectedPreprocessor</code> in \webpack\loader.js to stylus
-
-  4. change default files in styles from sass to stylus (*.styl) update <code>import</code> in index.js line 1
-
---> if u want to use the 'original' loose <strong>*.sass</strong> syntax just change the files from
-*.scss to *.sass and update <code>import</code> in index.js line 1
